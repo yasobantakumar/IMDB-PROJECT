@@ -1,0 +1,13 @@
+{% extends 'common.html' %}
+{% block yashimdb %}
+
+
+
+  {% for x in data %}
+    <tr><th>
+         <a href="{% url 'openmovie' %}?id={{ x }}"></a>
+           {{ x }}
+           </a>
+           </th></tr>
+    {% endfor %}
+{% endblock %}

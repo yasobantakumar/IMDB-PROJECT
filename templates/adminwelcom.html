@@ -1,0 +1,43 @@
+{% extends 'common.html' %}
+{% block yashimdb %}
+    {% include 'adminmenu.html' %}
+<h1 align="center">{{ data }}</h1>
+ <style>
+        #mid
+        {
+                  font-size: 20px;
+                  font-family: "Arial Black";
+                  padding: 3px;
+                  background-color: darkslateblue;
+                  color: greenyellow;
+        }
+    </style>
+    <table align="center" border="2">
+        <tr><th id="mid">Movies</th></tr>
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>year</th>
+        <th>length</th>
+        <th>rating votes</th>
+        <th>poster</th>
+    </tr>
+
+       {% for x in data %}
+           <tr>
+           <th>{{ x.id }}</th>
+           <th>{{ x.title }}</th>
+               <th>{{x.year  }}</th>
+               <th>{{ x.length }}</th>
+               <th>{{ x.ratingvotes }}</th>
+               <th>{{ x.poster }}</th>
+           </tr>
+{#           <tr><th>#}
+{#         <a href="{% url 'openmovie' %}?id={{ x }}"></a>#}
+{#           {{ x }}#}
+{#           </a>#}
+{#           </th></tr>#}
+       {% endfor %}
+    </table>
+
+{% endblock %}

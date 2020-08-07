@@ -1,0 +1,22 @@
+<html>
+<body>
+<table align="center" border="2">
+    <tr>
+        <th>Id</th>
+         <th>Title</th>
+         <th>Year</th>
+         <th>Rating</th>
+         <th>Plot</th>
+    </tr>
+    {% for x in data %}
+        <tr>
+        <th>{{ x.id }}</th>
+        <th>{{ x.title }}</th>
+        <th>{{ x.year }}</th>
+        <th>{{ x.rating }}</th>
+        <th>{{ x.plot }}</th>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
